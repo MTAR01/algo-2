@@ -1,0 +1,22 @@
+ALGORITHM InsertionSort
+VAR
+    arr: ARRAY_OF INTEGER
+    i: INTEGER = 0
+    j: INTEGER = 0
+    x: INTEGER
+    n: INTEGER
+BEGIN
+    n := length(arr) 
+    FOR i FROM 1 TO n - 1 DO
+        x:= arr[i] 
+        j := i - 1
+        
+      
+        WHILE j >= 0 AND arr[j] > x DO
+            arr[j + 1] := arr[j] 
+            j := j - 1
+        END_WHILE
+        
+        arr[j + 1] := x 
+    END_FOR
+END
